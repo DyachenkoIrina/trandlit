@@ -1,0 +1,265 @@
+body {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+* {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 52px;
+  letter-spacing: -3.2px;
+  text-align: center;
+  color: #4520ab;
+  margin-top: 44px;
+  margin-bottom: 86px;
+}
+
+.input_field,
+.dictionary {
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.input_field {
+  width: 500px;
+  height: 56px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #111111;
+  border-radius: 14px;
+}
+
+#input {
+  height: 25px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+  margin: 16px 0 16px 21px;
+  opacity: 0.4;
+}
+
+#add_btn {
+  height: 38px;
+  margin-right: 8px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  background-color: #111111;
+  color: #f0f0f0;
+  padding: 0px 12px 5px 12px;
+  letter-spacing: -0.54px;
+}
+
+#add_btn:hover,
+#clear_btn:hover {
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+#add_btn:active {
+  transform: scale(0.98);
+}
+
+.dictionary {
+  display: flex;
+  width: 500px;
+  min-height: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.regular,
+.variable {
+  display: flex;
+  flex-direction: row;
+}
+
+#list1 {
+  border-radius: 8px 0px 0px 8px;
+}
+
+#list {
+  border-radius: 0px 0px 0px 8px;
+}
+
+#edited_list,
+#edited_list1 {
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-left: 2px solid black;
+}
+#edited_list1 {
+  border-radius: 0px 8px 8px 0px;
+}
+
+#edited_list {
+  border-radius: 0px 0px 8px 0px;
+}
+
+#list,
+#list1 {
+  width: 250px;
+  background-color: #f0f0f0;
+}
+
+.list_item,
+.edited_list_item,
+.list_item1,
+.edited_list_item1 {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.54px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.list_item,
+.list_item1 {
+  gap: 28px;
+  padding-left: 12px;
+}
+
+.edited_list_item,
+.edited_list_item1 {
+  justify-content: space-between;
+  padding-left: 28px;
+  padding-right: 11px;
+}
+
+.list_item1,
+.edited_list_item1 {
+  border-bottom: none;
+}
+
+.list_item_wrapper {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.edited_item_number {
+  display: none;
+}
+
+.edited_item_number,
+.item_number {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.item_name {
+  max-width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  max-width: 230px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.48px;
+  text-align: center;
+  padding: 8px 16px 10px 16px;
+  left: 30%;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background-color: white;
+  border-radius: 10px;
+  color: #111111;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+[data-tooltip]:hover:after {
+  opacity: 1;
+  z-index: 1;
+}
+
+.edited_delete_btn {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: none;
+}
+
+.edited_delete_btn:active {
+  transform: scale(0.98);
+}
+
+#first_item_btn:disabled {
+  transform: unset;
+}
+
+.edited_delete_btn,
+.delete_icon {
+  background-image: url(../icons/delete_icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.edited_delete_btn:hover {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.list_item:last-child,
+.edited_list_item:last-child {
+  border-bottom: none;
+}
+
+.list_item:nth-child(1),
+.edited_list_item:nth-child(1) {
+  border-top: 1px solid black;
+  border-radius: 0px;
+}
+
+.delete_icon {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+}
+
+#clear_btn {
+  margin: 0 auto;
+  width: 176px;
+  height: 38px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.9px;
+
+  border: none;
+  border-radius: 8px;
+  background-color: #adadad;
+  padding-right: 10px;
+}
+#clear_btn:active {
+  transform: scale(0.98);
+}

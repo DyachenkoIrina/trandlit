@@ -1,0 +1,76 @@
+@media (max-width: 767px) and (min-width: 360px) {
+  body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 47px;
+    letter-spacing: -2.52px;
+    margin-top: 20px;
+    margin-bottom: 38px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .input_field {
+    width: 328px;
+    margin-bottom: 32px;
+  }
+
+  #input {
+    font-size: 15px;
+    margin: 17px 0 15px 21px;
+    letter-spacing: -0.75px;
+  }
+
+  .dictionary {
+    flex-direction: column;
+    width: 328px;
+    min-height: 80px;
+    margin-bottom: 16px;
+  }
+
+  #list {
+    border-radius: 0px 0px 0px 8px;
+  }
+
+  #edited_list {
+    border-left: 2px solid black;
+    border-radius: 0px 0px 8px 0px;
+  }
+
+  .list_item,
+  .edited_list_item {
+    font-weight: 400;
+  }
+
+  .list_item_wrapper {
+    display: flex;
+    gap: 16px;
+  }
+
+  .list_item {
+    gap: 28px;
+  }
+
+  .list_item,
+  .edited_list_item,
+  .edited_list_item1 {
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 8px;
+  }
+
+  .edited_list_item::nth-child(1) {
+    border-top: 1px solid black;
+    border-radius: 0px;
+  }
+
+  .delete_btn {
+    display: unset;
+  }
+  .edited_item_number {
+    display: unset;
+  }
+}
