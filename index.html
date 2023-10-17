@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;0,600;1,100;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Транслит</title>
+  </head>
+  <body>
+    <h1>T.R.A.N.S.L.I.T.</h1>
+
+    <div class="input_field">
+      <input id="input" type="text" placeholder="Начните вводить текст" />
+      <button id="add_btn">Добавить</button>
+    </div>
+
+    <div class="dictionary">
+      <div class="container">
+        <div class="regular">
+          <div id="list1">
+            <div class="list_item1">
+              <div class="list_item_wrapper">
+                <div class="item_number">1</div>
+                <p class="item_name1">Привет 👋🏼</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="edited_list1">
+            <div class="edited_list_item1">
+              <div class="list_item_wrapper">
+                <div class="edited_item_number">1</div>
+                <p class="item_name">Privet</p>
+              </div>
+
+              <button
+                disabled
+                id="first_item_btn"
+                class="edited_delete_btn"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="variable">
+          <div id="list"></div>
+
+          <div id="edited_list"></div>
+        </div>
+      </div>
+    </div>
+
+    <button id="clear_btn">
+      <div class="delete_icon"></div>
+      Очистить всё
+    </button>
+
+    <script defer src="./index.js"></script>
+  </body>
+</html>
